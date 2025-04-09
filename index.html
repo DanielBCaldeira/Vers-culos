@@ -174,16 +174,19 @@
     "O teu umbigo é como uma taça redonda, a que não falta bebida. <br>Cânticos 7:2"
     ];
 
-        function showVersiculo(answer) {
-            const responseDiv = document.getElementById('response');
-            if (answer === 'sim') {
-                const randomVersiculo = versiculos[Math.floor(Math.random() * versiculos.length)];
-                responseDiv.innerHTML = randomVersiculo;
-            } else {
-                const randomVersiculo = versiculos[Math.floor(Math.random() * versiculos.length)];
-                responseDiv.innerHTML = `Tudo bem, mas lembre-se: Deus sempre está ao seu lado, e eu farei o possível para ser presente como ele. <br><br>${randomVersiculo}`;
-            }
-        }
+    function showVersiculo(answer) {
+    const responseDiv = document.getElementById('response');
+    const normalizedAnswer = answer.trim().toLowerCase(); // remove espaços e transforma em minúsculas
+
+    const randomVersiculo = versiculos[Math.floor(Math.random() * versiculos.length)];
+
+    if (normalizedAnswer === 'sim') {
+        responseDiv.innerHTML = randomVersiculo;
+    } else {
+        responseDiv.innerHTML = `Tudo bem, mas lembre-se: Deus sempre está ao seu lado, e eu farei o possível para ser presente como ele. <br><br>`;
+    }
+}
+
 
         var audio = document.getElementById('musica');
 var playPauseBtn = document.getElementById('playPauseBtn');
