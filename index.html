@@ -63,7 +63,6 @@
         Seu navegador não suporta a tag de áudio.
     </audio>
 
-    <!-- Botão personalizado -->
     <button id="playPauseBtn">Tocar Música</button>
 
     <script src="script.js"></script>
@@ -86,27 +85,38 @@
     <script>
         const versiculos = [
             "Você é amada de uma forma incrível, e Deus sempre estará com você. <br>1 Coríntios 13:7 - 'O amor tudo sofre, tudo crê, tudo espera, tudo suporta.'",
-            "Espere no Senhor, seja forte! Coragem! Espere no Senhor. <br>Salmos 27:14",
-            "Mas os que esperam no Senhor renovarão as suas forças, subirão com asas como águias; correrão, e não se cansarão; andarão, e não se fatigarão. <br>Isaías 40:31",
-            "Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento; reconheça-o em todos os seus caminhos, e ele endireitará as suas veredas. <br>Provérbios 3:5-6",
-            "Porque eu sei os planos que tenho para vocês, diz o Senhor, planos de fazê-los prosperar e não de lhes causar dano, planos de dar-lhes uma esperança e um futuro. <br>Jeremias 29:11",
-            "Tudo fez formoso em seu devido tempo. Também pôs no coração do homem o anseio pela eternidade, sem que possa descobrir a obra que Deus fez, desde o princípio até o fim. <br>Eclesiastes 3:11",
-            "Deus tem planos perfeitos para você, e Ele nunca falha. <br>Isaías 55:8-9",
-            "Espere com paciência pelo Senhor; tenha coragem, e Ele fortalecerá o seu coração. Espere pelo Senhor! <br>Salmos 27:14",
-            "Não tenha medo, porque o Senhor seu Deus estará com você em todos os caminhos que você percorrer. <br>Josué 1:9",
-            "Entrega o teu caminho ao Senhor, confia nele, e o mais Ele fará. <br>Salmos 37:5",
-            "O Senhor é bom para aqueles que esperam por Ele, para a alma que o busca. <br>Lamentações 3:25",
-            "Esperar no Senhor é sempre a melhor escolha. Ele nunca nos abandona. <br>Salmos 25:5",
-            "O Senhor é o meu pastor, nada me faltará. <br>Salmos 23:1",
-            "Deus tem o controle de tudo, espere com fé e paciência. <br>Tiago 5:7-8",
-            "Eu sei os planos que tenho para vocês, diz o Senhor, planos de bem e não de mal, para lhes dar um futuro e uma esperança. <br>Jeremias 29:11",
-            "Quando o Senhor dirige os passos de uma pessoa, ela se sente feliz. <br>Salmos 37:23",
-            "Deus está cuidando de você a cada passo. <br>Filipenses 4:6-7",
-            "O Senhor é fiel, Ele nunca nos abandona. <br>1 Coríntios 1:9",
-            "Bendito seja o nome do Senhor, que é digno de ser louvado! <br>Salmos 113:2",
-            "Deus sabe o tempo certo para todas as coisas. <br>Eclesiastes 3:1",
-            "O Senhor te sustenta em tempos de necessidade. <br>Salmos 37:19",
-            "Eu sou contigo, não te deixarei, nem te desampararei. <br>Josué 1:5"
+    "Espere no Senhor, seja forte! Coragem! Espere no Senhor. <br>Salmos 27:14",
+    "Mas os que esperam no Senhor renovarão as suas forças, subirão com asas como águias; correrão, e não se cansarão; andarão, e não se fatigarão. <br>Isaías 40:31",
+    "Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento; reconheça-o em todos os seus caminhos, e ele endireitará as suas veredas. <br>Provérbios 3:5-6",
+    "Porque eu sei os planos que tenho para vocês, diz o Senhor, planos de fazê-los prosperar e não de lhes causar dano, planos de dar-lhes uma esperança e um futuro. <br>Jeremias 29:11",
+    "Tudo fez formoso em seu devido tempo. Também pôs no coração do homem o anseio pela eternidade, sem que possa descobrir a obra que Deus fez, desde o princípio até o fim. <br>Eclesiastes 3:11",
+    "Deus tem planos perfeitos para você, e Ele nunca falha. <br>Isaías 55:8-9",
+    "Espere com paciência pelo Senhor; tenha coragem, e Ele fortalecerá o seu coração. Espere pelo Senhor! <br>Salmos 27:14",
+    "Não tenha medo, porque o Senhor seu Deus estará com você em todos os caminhos que você percorrer. <br>Josué 1:9",
+    "Entrega o teu caminho ao Senhor, confia nele, e o mais Ele fará. <br>Salmos 37:5",
+    "O Senhor é bom para aqueles que esperam por Ele, para a alma que o busca. <br>Lamentações 3:25",
+    "Esperar no Senhor é sempre a melhor escolha. Ele nunca nos abandona. <br>Salmos 25:5",
+    "O Senhor é o meu pastor, nada me faltará. <br>Salmos 23:1",
+    "Deus tem o controle de tudo, espere com fé e paciência. <br>Tiago 5:7-8",
+    "Eu sei os planos que tenho para vocês, diz o Senhor, planos de bem e não de mal, para lhes dar um futuro e uma esperança. <br>Jeremias 29:11",
+    "Quando o Senhor dirige os passos de uma pessoa, ela se sente feliz. <br>Salmos 37:23",
+    "Deus está cuidando de você a cada passo. <br>Filipenses 4:6-7",
+    "O Senhor é fiel, Ele nunca nos abandona. <br>1 Coríntios 1:9",
+    "Bendito seja o nome do Senhor, que é digno de ser louvado! <br>Salmos 113:2",
+    "Deus sabe o tempo certo para todas as coisas. <br>Eclesiastes 3:1",
+    "O Senhor te sustenta em tempos de necessidade. <br>Salmos 37:19",
+    "Eu sou contigo, não te deixarei, nem te desampararei. <br>Josué 1:5",
+    "Às éguas dos carros de Faraó te comparo, ó meu amor. Formosas são as tuas faces entre os teus enfeites, o teu pescoço com os colares. Enfeites de ouro te faremos, com incrustações de prata. Enquanto o rei está assentado à sua mesa, o meu nardo exala o seu perfume. O meu amado é para mim como um ramalhete de mirra, posto entre os meus seios. Como um ramalhete de hena nas vinhas de En-Gedi é para mim o meu amado. Eis que és formosa, ó meu amor, eis que és formosa; os teus olhos são como os das pombas. Eis que és formoso, ó amado meu, e também amável; o nosso leito é verde. As traves da nossa casa são de cedro, as nossas varandas de cipreste. <br>Cânticos 1:9",
+    "Que o Senhor faça crescer o amor de vocês, e que esse amor transborde de uns para com os outros. <br>1 Tessalonicenses 3:12",
+    "Assim, eles já não são dois, maJs sim uma só carne. Portanto, o que Deus uniu, ninguém o separe. <br>Mateus 19:6",
+    "Acima de tudo, revistam-se do amor, que é o elo perfeito. <br>Colossenses 3:14",
+    "O amor seja sincero. Odeiem o que é mau; apeguem-se ao que é bom. Dediquem-se uns aos outros com amor fraternal. <br>Romanos 12:9-10",
+    "Como é lindo o seu amor, minha querida! Melhor do que o vinho é o seu carinho. <br>Cânticos 4:10",
+    "Tu me arrebataste o coração, minha irmã, minha noiva; com um só olhar me deixaste sem palavras. <br>Cânticos 4:9",
+    "O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. <br>1 Coríntios 13:4",
+    "Muitas águas não podem apagar o amor; os rios não conseguem levá-lo na correnteza. <br>Cânticos 8:7",
+    "Eu achei aquele a quem o meu coração ama. Agarrei-o e não o deixei ir. <br>Cânticos 3:4",
+    "Meu amado é meu, e eu sou dele. <br>Cânticos 2:16"
         ];
 
         function showVersiculo(answer) {
@@ -122,6 +132,8 @@
 
         var audio = document.getElementById('musica');
 var playPauseBtn = document.getElementById('playPauseBtn');
+
+audio.volume = 0.2;
 
 // Função para alternar entre play e pause
 playPauseBtn.addEventListener('click', function() {
