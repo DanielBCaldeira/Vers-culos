@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu cantinho de conforto e palavras de Deus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fff7e6;
+        }
+        h1 {
+            color: #b89c61;
+        }
+        p {
+            font-size: 22px;
+            color: #b89c61;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #f3c148;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #b89c61;
+        }
+        .response {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #b89c61;
+        }
+        .image-container img {
+            width: 150px;
+            height: auto;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!-- Substitua o caminho da imagem abaixo pela URL ou caminho do seu arquivo -->
+        <img src="Screenshot_1.png" alt="Imagem inspiradora">
+    </div>
+    <h1>Sempre que precisar de algum conselho ou estiver em um momento difícil, espero que encontre conforto aqui.</h1>
+    <p>Precisa de uma palavra de Deus?</p>
+    <div class="button-container">
+        <button onclick="showVersiculo('sim')">Sim</button>
+        <button onclick="showVersiculo('nao')">Não</button>
+    </div>
+
+    <div class="response" id="response"></div>
+
+    <script>
+        const versiculos = [
+            "Você é amada de uma forma incrível, e Deus sempre estará com você. <br>1 Coríntios 13:7 - 'O amor tudo sofre, tudo crê, tudo espera, tudo suporta.'",
+            "Espere no Senhor, seja forte! Coragem! Espere no Senhor. <br>Salmos 27:14",
+            "Mas os que esperam no Senhor renovarão as suas forças, subirão com asas como águias; correrão, e não se cansarão; andarão, e não se fatigarão. <br>Isaías 40:31",
+            "Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento; reconheça-o em todos os seus caminhos, e ele endireitará as suas veredas. <br>Provérbios 3:5-6",
+            "Porque eu sei os planos que tenho para vocês, diz o Senhor, planos de fazê-los prosperar e não de lhes causar dano, planos de dar-lhes uma esperança e um futuro. <br>Jeremias 29:11",
+            "Tudo fez formoso em seu devido tempo. Também pôs no coração do homem o anseio pela eternidade, sem que possa descobrir a obra que Deus fez, desde o princípio até o fim. <br>Eclesiastes 3:11",
+            "Deus tem planos perfeitos para você, e Ele nunca falha. <br>Isaías 55:8-9",
+            "Espere com paciência pelo Senhor; tenha coragem, e Ele fortalecerá o seu coração. Espere pelo Senhor! <br>Salmos 27:14",
+            "Não tenha medo, porque o Senhor seu Deus estará com você em todos os caminhos que você percorrer. <br>Josué 1:9",
+            "Entrega o teu caminho ao Senhor, confia nele, e o mais Ele fará. <br>Salmos 37:5",
+            "O Senhor é bom para aqueles que esperam por Ele, para a alma que o busca. <br>Lamentações 3:25",
+            "Esperar no Senhor é sempre a melhor escolha. Ele nunca nos abandona. <br>Salmos 25:5",
+            "O Senhor é o meu pastor, nada me faltará. <br>Salmos 23:1",
+            "Deus tem o controle de tudo, espere com fé e paciência. <br>Tiago 5:7-8",
+            "Eu sei os planos que tenho para vocês, diz o Senhor, planos de bem e não de mal, para lhes dar um futuro e uma esperança. <br>Jeremias 29:11",
+            "Quando o Senhor dirige os passos de uma pessoa, ela se sente feliz. <br>Salmos 37:23",
+            "Deus está cuidando de você a cada passo. <br>Filipenses 4:6-7",
+            "O Senhor é fiel, Ele nunca nos abandona. <br>1 Coríntios 1:9",
+            "Bendito seja o nome do Senhor, que é digno de ser louvado! <br>Salmos 113:2",
+            "Deus sabe o tempo certo para todas as coisas. <br>Eclesiastes 3:1",
+            "O Senhor te sustenta em tempos de necessidade. <br>Salmos 37:19",
+            "Eu sou contigo, não te deixarei, nem te desampararei. <br>Josué 1:5"
+        ];
+
+        function showVersiculo(answer) {
+            const responseDiv = document.getElementById('response');
+            if (answer === 'sim') {
+                const randomVersiculo = versiculos[Math.floor(Math.random() * versiculos.length)];
+                responseDiv.innerHTML = randomVersiculo;
+            } else {
+                const randomVersiculo = versiculos[Math.floor(Math.random() * versiculos.length)];
+                responseDiv.innerHTML = `Tudo bem, mas lembre-se: Deus sempre está ao seu lado, e eu farei o possível para ser presente como ele. <br><br>${randomVersiculo}`;
+            }
+        }
+    </script>
+</body>
+</html>
