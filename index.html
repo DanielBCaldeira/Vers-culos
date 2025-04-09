@@ -53,9 +53,23 @@
             height: auto;
             margin-top: 30px;
         }
+
     </style>
 </head>
 <body>
+
+    <audio id="musica" loop>
+        <source src="Leandro Borges - Deus e Eu.mp3" type="audio/mp3">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+
+    <!-- Botão personalizado -->
+    <button id="playPauseBtn">Tocar Música</button>
+
+    <script src="script.js"></script>
+
+    
+
     <div class="image-container">
         <!-- Substitua o caminho da imagem abaixo pela URL ou caminho do seu arquivo -->
         <img src="Screenshot_1.png" alt="Imagem inspiradora">
@@ -105,6 +119,20 @@
                 responseDiv.innerHTML = `Tudo bem, mas lembre-se: Deus sempre está ao seu lado, e eu farei o possível para ser presente como ele. <br><br>${randomVersiculo}`;
             }
         }
+
+        var audio = document.getElementById('musica');
+var playPauseBtn = document.getElementById('playPauseBtn');
+
+// Função para alternar entre play e pause
+playPauseBtn.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = 'Pausar'; // Atualiza o texto do botão
+    } else {
+        audio.pause();
+        playPauseBtn.textContent = 'Tocar Música'; // Atualiza o texto do botão
+    }
+});
     </script>
 </body>
 </html>
